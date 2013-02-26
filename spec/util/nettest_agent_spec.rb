@@ -26,7 +26,6 @@ module MCollective
 
       describe '#get_ip_from_hostname' do
         let(:ipaddress) { '1.2.3.4' }
-        let(:resolver) { mock }
 
         it 'should return the hostname if hostname is an ip address' do
           NettestAgent.expects(:is_hostname?).returns(false)
@@ -35,16 +34,14 @@ module MCollective
 
         it 'should return the resolved ip address if hostname can be found' do
           NettestAgent.expects(:is_hostname?).returns(true)
-          Resolv::DNS.stubs(:new).returns(resolver)
-          resolver.expects(:getaddress).with('example.com').returns('1.2.3.4')
+          Resolv.expects(:getaddress).with('example.com').returns('1.2.3.4')
 
           NettestAgent.get_ip_from_hostname('example.com').should == '1.2.3.4'
         end
 
         it 'should return nil if hostname cannot be resolved' do
           NettestAgent.expects(:is_hostname?).returns(true)
-          Resolv::DNS.stubs(:new).returns(resolver)
-          resolver.expects(:getaddress).raises(Resolv::ResolvError)
+          Resolv.expects(:getaddress).raises(Resolv::ResolvError)
 
           NettestAgent.get_ip_from_hostname('example.com').should be_nil
         end

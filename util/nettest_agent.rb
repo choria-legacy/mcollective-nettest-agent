@@ -13,7 +13,7 @@ module MCollective
       def self.get_ip_from_hostname(hostname)
         if NettestAgent.is_hostname?(hostname)
           begin
-            return Resolv::DNS.new.getaddress(hostname).to_s
+            return Resolv.getaddress(hostname).to_s
           rescue Resolv::ResolvError
             return nil
           end

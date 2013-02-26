@@ -2,7 +2,7 @@ metadata    :name        => "nettest",
             :description => "Agent to do network tests from a mcollective host",
             :author      => "Dean Smith <dean@zelotus.com>",
             :license     => "BSD",
-            :version     => "3.0.0",
+            :version     => "3.0.1",
             :url         => "http://github.com/deasmi",
             :timeout     => 60
 
