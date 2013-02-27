@@ -11,8 +11,6 @@ module MCollective
         before do
           agent_file = File.join(File.dirname(__FILE__), "../../", "agent", "nettest.rb")
           @agent = MCollective::Test::LocalAgentTest.new("nettest", :agent_file => agent_file).plugin
-          #@agent.instance_variable_set("@lockfile", "spec_test_lock_file")
-          #@agent.instance_variable_set("@pidfile",  "spec_test_pid_file")
         end
 
         describe "ping_action" do

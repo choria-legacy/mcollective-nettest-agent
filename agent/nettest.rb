@@ -3,7 +3,7 @@ module MCollective
     class Nettest<RPC::Agent
       activate_when do
         begin
-          require 'net/ping'
+          require 'net/ping/icmp'
           require 'mcollective/util/nettest_agent'
 
           true
