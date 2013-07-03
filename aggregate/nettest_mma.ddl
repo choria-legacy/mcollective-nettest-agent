@@ -1,10 +1,10 @@
-etadata :name => "nettest_mma",
-        :description => "Max, min, average aggregate function.",
-        :author => "P. Loubser <pieter.loubser@puppetlabs.com>",
-        :license => "BSD",
-        :version => "1.0.0",
-        :url => "http://projects.puppetlabs.com/projects/mcollective-plugins/wiki",
-        :timeout => 1
+metadata :name => "nettest_mma",
+         :description => "Max, min, average aggregate function.",
+         :author => "P. Loubser <pieter.loubser@puppetlabs.com>",
+         :license => "BSD",
+         :version => "1.0.0",
+         :url => "http://projects.puppetlabs.com/projects/mcollective-plugins/wiki",
+         :timeout => 1
 
 usage <<-END_OF_USAGE
 Min, Max Average(Mma) Aggregate function is a numeric type function
