@@ -1,0 +1,22 @@
+Source: mcollective-nettest
+Homepage: https://github.com/puppetlabs/mcollective-nettest-agent
+Section: utils
+Priority: extra
+Maintainer: Puppet Labs
+Build-Depends: cdbs, debhelper
+Standards-Version: 3.8.0
+
+Package: mcollective-nettest-agent
+Architecture: all
+Depends: mcollective-nettest-common(= ${binary:Version})
+Description: Agent to do network tests from a mcollective host
+
+Package: mcollective-nettest-client
+Architecture: all
+Depends: mcollective-nettest-common(= ${binary:Version})
+Description: Agent to do network tests from a mcollective host
+
+Package: mcollective-nettest-common
+Architecture: all
+Depends: mcollective-common(>= 2.2.1)
+Description: Agent to do network tests from a mcollective host
