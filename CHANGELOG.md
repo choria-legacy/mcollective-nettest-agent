@@ -5,7 +5,7 @@ Change history for mcollective-nettest.
 
 ## 3.0.4
 
-Released 2013-07-18
+Released 2014-07-18
 
 * Add pl:packaging targets to enable package building for
   {apt,yum}.puppetlabs.com (MCOP-73)
